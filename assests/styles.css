@@ -1,0 +1,111 @@
+*,*::before,
+*::after{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+:root{
+
+--dk-white:hsl(341, 100%, 85%)
+--lt-white:hsla(360, 50%, 76%, 1)
+--lt-white:hsla(360, 30%, 66%, 1)
+--vb-white:hsla(360, 20%, 36%, 1)
+--vb-white:hsla(360, 15%, 16%, 1)
+
+
+--vb-maroon: hsla(360, 100%, 11%, 1)
+--pl-white: hsl(341, 100%, 85%)
+--vb-cyan: hsla(350, 12%, 91%, 1)
+--vb-cayn2: hsla(348, 50%, 11%, 1)
+--dk-text: hsla(315, 15%, 1%, 1)
+
+
+
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background: linear-gradient; */
+    background: linear-gradient(90deg, rgba(27, 27, 26, 0.08) 0%, rgba(168, 181, 183, 1) 50%, rgba(46, 156, 170, 0.94) 100%);
+}
+h1{
+    color: whitesmoke;
+
+}
+.display-container{
+    position: relative;
+    background-color: rgb(105, 138, 169);
+    border-radius: 1rem;
+    border-bottom: 0.35 solid blanchedalmond;
+    margin:1rem 0 ;
+padding-right: 3.25rem;
+
+}
+.display{
+    width: 100%;
+     background-color: transparent;
+padding: 1.15 rem 1 rem;
+color: yellow;
+font-weight: 600;
+font-size: 1.5 rem;
+line-height: 30px;
+letter-spacing: 1px;
+padding-right: 3.25rem;
+
+
+}
+input.display{
+    width: 100%;
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: var(--vb-yellow);
+    background: transparent;
+    /* line-height: 3rem; */
+    letter-spacing: 1px;
+    border: none;
+    outline: none;
+}
+
+input.display::placeholder{
+    color: var(--vb-yellow);
+    text-transform: uppercase;
+    opacity: 0.65;
+}
+
+button.copy-btn{
+    border: none;
+    outline: none;
+    background: transparent;
+    /* all: unset; */
+    cursor: pointer;
+    position: relative;
+}
+
+button.copy-btn .copy-img{
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+button.copy-btn .copy-tooltip{
+    position: absolute;
+    top: -3.7rem;
+    left: -3rem;
+    color: var(--vb-yellow);
+    background-color: var(--vb-violet2);
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 1.6rem;
+    transform-origin: bottom;
+    transition: all 250ms ease-in-out;
+    opacity: 0;
+    transform: scale(0);
+}
+
+button.copy-btn .copy-tooltip.active{
+    opacity: 1;
+    transform: scale(1);
+}
